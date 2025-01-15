@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-weight: 200;
+    letter-spacing: 0.04em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #1a1a1a;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    position: relative;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: calc(100vh - 80px);
+    background: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    min-height: 600px;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+/* Star Border Button Styles */
+.star-border-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 1px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.star-border {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.4rem;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to bottom, 
+        rgba(26, 26, 26, 0.95), 
+        rgba(26, 26, 26, 0.85)
+    );
+    color: white;
+}
+
+.star-trail {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 1) 0.5%,
+        rgba(255, 255, 255, 0.9) 1%,
+        transparent 2%
+    );
+    animation: starMovementAround 5s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+.star-trail-top, .star-trail-bottom {
+    display: none;
+}
+
+@keyframes starMovementAround {
+    0% {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.button-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.arrow-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.star-border:hover .arrow-icon {
+    transform: translate(2px, -2px);
+}
+
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Add other styles as needed */ 
