@@ -973,3 +973,35 @@ footer {
     0% { background-position: 0% 50%; }
     100% { background-position: 200% 50%; }
 }
+
+.certifications {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cert-logo {
+    height: 24px;
+    width: auto;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: brightness(0);
+}
+
+.cert-logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .certifications {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .cert-logo {
+        height: 20px;
+    }
+}
