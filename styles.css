@@ -40,6 +40,7 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -102,24 +103,6 @@ nav {
     overflow: hidden;
 }
 
-/* Add subtle animated gradient overlay */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, 
-        rgba(0, 82, 204, 0.08) 0%, 
-        rgba(0, 184, 217, 0.05) 25%,
-        rgba(0, 82, 204, 0) 50%,
-        rgba(0, 184, 217, 0.05) 75%,
-        rgba(0, 82, 204, 0.08) 100%);
-    animation: gradientMove 15s linear infinite;
-    z-index: 1;
-}
-
 .hero > * {
     position: relative;
     z-index: 2;
@@ -155,7 +138,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     border-radius: 24px;
     padding: 3rem;
@@ -163,6 +146,7 @@ nav {
     width: 100%;
     margin-top: 2rem;
     position: relative;
+    box-shadow: 0 8px 32px rgba(0, 82, 204, 0.1);
 }
 
 .hero-stats::before {
@@ -988,4 +972,36 @@ footer {
 @keyframes shimmer {
     0% { background-position: 0% 50%; }
     100% { background-position: 200% 50%; }
+}
+
+.certifications {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cert-logo {
+    width: auto;
+    height: 24px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: brightness(0) invert(1);
+}
+
+.cert-logo:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .certifications {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .cert-logo {
+        height: 20px;
+    }
 }
