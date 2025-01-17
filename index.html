@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="https://georgs-janis-klavins.github.io/mypage/">
     <title>SmartCooling™ | Intelligent Adiabatic Systems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Reduce energy consumption up to 37% with state-of-the-art adiabatic technology">
+    <link rel="preload" as="style" href="styles.css">
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" crossorigin>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">SmartCooling™</div>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -60,6 +63,7 @@
                     <iframe 
                         src="https://www.youtube.com/embed/oBmYt-xquOU?si=wdlEkM1x_gs7Msbx" 
                         title="YouTube video player" 
+                        loading="lazy"
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" 
@@ -168,11 +172,11 @@
                 <p class="section-subtitle">Join the companies that have transformed their cooling efficiency</p>
             </div>
             <div class="trusted-logos">
-                <img src="images/carrier-heat-ac-1.svg" alt="Carrier" class="trusted-logo">
-                <img src="images/daikin-logo-1-.svg" alt="Daikin" class="trusted-logo">
-                <img src="images/microsoft-6.svg" alt="Microsoft" class="trusted-logo">
-                <img src="images/tesla-9.svg" alt="Tesla" class="trusted-logo">
-                <img src="images/york-1.svg" alt="York" class="trusted-logo">
+                <img src="images/carrier-heat-ac-1.svg" alt="Carrier" class="trusted-logo" loading="lazy" decoding="async">
+                <img src="images/daikin-logo-1-.svg" alt="Daikin" class="trusted-logo" loading="lazy" decoding="async">
+                <img src="images/microsoft-6.svg" alt="Microsoft" class="trusted-logo" loading="lazy" decoding="async">
+                <img src="images/tesla-9.svg" alt="Tesla" class="trusted-logo" loading="lazy" decoding="async">
+                <img src="images/york-1.svg" alt="York" class="trusted-logo" loading="lazy" decoding="async">
             </div>
         </section>
 
